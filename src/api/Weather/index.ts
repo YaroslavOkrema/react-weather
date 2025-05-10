@@ -16,5 +16,7 @@ export const fetchWeather = async (city: string): Promise<CityWeather> => {
     humidity: data.main.humidity,
     windSpeed: data.wind.speed,
     description: data.weather[0].description,
+    lat: data.coord.lat,
+    lon: data.coord.lon,
   };
 };

@@ -2,6 +2,7 @@ import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import type { CitiesState } from "@/store/ruducers/CitiesReducer/types.ts";
 import type { CityWeather } from "@/types";
 import { fetchCityWeather } from "@/store/thunks/CityWeatherThunk";
+import { fetchHourlyForecast } from "@/store/thunks/HourlyForecastThunk";
 
 const initialState: CitiesState = {
   citiesList: [],
@@ -38,6 +39,12 @@ const citiesSlice = createSlice({
       .addCase(fetchCityWeather.rejected, (state, action) => {
         console.log("error", action.error.message);
         state.error = action.error.message || "Unknown error";
+      })
+      .addCase(fetchHourlyForecast.fulfilled, (state, action) => {
+        const { city, hourlyForecast } = action.payload;
+        if (state.weatherData[city]) {
+          state.weatherData[city].hourlyForecast = hourlyForecast;
+        }
       });
   },
 });
