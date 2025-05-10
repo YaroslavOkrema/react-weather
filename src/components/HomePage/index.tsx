@@ -1,5 +1,3 @@
 export const HomePage = () => {
-  return (
-    <div>Погода у містах</div>
-  )
-}
+  return <div>Погода у містах</div>;
+};

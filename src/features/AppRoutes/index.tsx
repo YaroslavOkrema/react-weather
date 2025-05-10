@@ -9,5 +9,5 @@ export const AppRoutes = () => {
       <Route path={RoutesPath.HOME} element={<HomePage />} />
       <Route path={RoutesPath.CITY_DETAILS} element={<CityDetails />} />
     </Routes>
-  )
-}
+  );
+};

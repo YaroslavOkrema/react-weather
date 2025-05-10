@@ -7,5 +7,5 @@ export const CityDetails = () => {
     <div>
       <h1>Деталі погоди для міста з ID: {id}</h1>
     </div>
-  )
-}
+  );
+};
