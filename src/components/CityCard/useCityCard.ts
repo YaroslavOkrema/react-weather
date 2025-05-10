@@ -1,9 +1,7 @@
 import { useDispatch } from "react-redux";
-import {
-  removeCity,
-  updateWeatherData,
-} from "../../store/ruducers/CitiesReducer/CitiesSlice.ts";
-import { fetchWeather } from "../../api/Weather";
+import { fetchWeather } from "@/api/Weather";
+import { removeCity, updateWeatherData } from "@/store/ruducers/CitiesReducer/CitiesSlice.ts";
+
 
 export const useCityCard = (city: string) => {
   const dispatch = useDispatch();

@@ -1,7 +1,6 @@
-import type { CityWeather } from "../../types";
 import axios from "axios";
-
-const API_KEY = "642c1ad128fd816bcb4ea30d07064974";
+import type { CityWeather } from "@/types";
+import { API_KEY } from "@/api/Weather/constants.ts";
 
 export const fetchWeather = async (city: string): Promise<CityWeather> => {
   const response = await axios.get(

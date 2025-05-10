@@ -1,4 +1,4 @@
-import type { CityWeather } from "../../types";
+import type { CityWeather } from "@/types";
 
 export type CityCardProps = {
   city: string;

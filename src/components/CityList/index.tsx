@@ -1,5 +1,5 @@
-import { useCityList } from "./useCityList.ts";
-import { CityCard } from "../CityCard";
+import { CityCard } from "@/components/CityCard";
+import { useCityList } from "@/components/CityList/useCityList.ts";
 
 export const CityList = () => {
   const { cities, handleAddCity, weatherData, city, setCity } = useCityList();

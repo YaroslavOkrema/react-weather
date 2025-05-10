@@ -1,6 +1,6 @@
 import type { JSX } from "react";
-import { useCityCard } from "./useCityCard.ts";
-import type { CityCardProps } from "./types.ts";
+import type { CityCardProps } from "@/components/CityCard/types.ts";
+import { useCityCard } from "@/components/CityCard/useCityCard.ts";
 
 export const CityCard = ({ city, weather }: CityCardProps): JSX.Element => {
   const { handleRemove, handleUpdate } = useCityCard(city);

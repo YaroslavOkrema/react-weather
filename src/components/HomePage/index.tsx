@@ -1,4 +1,4 @@
-import { CityList } from "../CityList";
+import { CityList } from "@/components/CityList";
 
 export const HomePage = () => {
   return (

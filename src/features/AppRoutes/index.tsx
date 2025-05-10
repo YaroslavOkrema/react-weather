@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-import { HomePage } from "../../components/HomePage";
-import { CityDetails } from "../../components/CityDetails";
-import { RoutesPath } from "../../types/enums.ts";
+import { RoutesPath } from "@/types";
+import { HomePage } from "@/components/HomePage";
+import { CityDetails } from "@/components/CityDetails";
 
 export const AppRoutes = () => {
   return (

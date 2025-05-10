@@ -1,7 +1,7 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
-import type { CityWeather } from "../../../types";
-import { fetchCityWeather } from "../../thunks/CityWeatherThunk";
-import type { CitiesState } from "./types.ts";
+import type { CitiesState } from "@/store/ruducers/CitiesReducer/types.ts";
+import type { CityWeather } from "@/types";
+import { fetchCityWeather } from "@/store/thunks/CityWeatherThunk";
 
 const initialState: CitiesState = {
   citiesList: [],
