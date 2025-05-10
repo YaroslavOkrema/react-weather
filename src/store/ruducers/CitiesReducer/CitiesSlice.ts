@@ -1,12 +1,7 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import type { CityWeather } from "../../../types";
 import { fetchCityWeather } from "../../thunks/CityWeatherThunk";
-
-type CitiesState = {
-  citiesList: string[];
-  weatherData: Record<string, CityWeather>;
-  error: string | null;
-};
+import type { CitiesState } from "./types.ts";
 
 const initialState: CitiesState = {
   citiesList: [],
@@ -26,12 +21,6 @@ const citiesSlice = createSlice({
         (city) => city !== action.payload,
       );
       delete state.weatherData[action.payload];
-    },
-    setWeatherData(
-      state,
-      action: PayloadAction<{ city: string; weather: CityWeather }>,
-    ) {
-      state.weatherData[action.payload.city] = action.payload.weather;
     },
     updateWeatherData(
       state,
@@ -53,6 +42,5 @@ const citiesSlice = createSlice({
   },
 });
 
-export const { addCity, removeCity, setWeatherData, updateWeatherData } =
-  citiesSlice.actions;
+export const { addCity, removeCity, updateWeatherData } = citiesSlice.actions;
 export default citiesSlice.reducer;

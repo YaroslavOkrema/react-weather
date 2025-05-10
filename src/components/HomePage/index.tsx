@@ -1,3 +1,10 @@
+import { CityList } from "../CityList";
+
 export const HomePage = () => {
-  return <div>Погода у містах</div>;
+  return (
+    <div>
+      <h1>Weather</h1>
+      <CityList />
+    </div>
+  );
 };
