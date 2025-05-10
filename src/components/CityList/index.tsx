@@ -16,11 +16,13 @@ export const CityList = () => {
         <button onClick={handleAddCity}>Додати місто</button>
       </div>
 
-      <div className="city-list">
-        {cities.map((city) => (
-          <CityCard key={city} city={city} weather={weatherData[city]} />
-        ))}
-      </div>
+      {cities.length > 0 && (
+        <div className="city-list">
+          {cities.map((city) => (
+            <CityCard key={city} city={city} weather={weatherData[city]} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

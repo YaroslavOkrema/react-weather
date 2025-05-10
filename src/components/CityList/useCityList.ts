@@ -1,9 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import type { RootState } from "@/store";
-import { addCity, updateWeatherData } from "@/store/ruducers/CitiesReducer/CitiesSlice.ts";
+import {
+  addCity,
+  updateWeatherData,
+} from "@/store/ruducers/CitiesReducer/CitiesSlice.ts";
 import { fetchWeather } from "@/api/Weather";
-
 
 export const useCityList = () => {
   const dispatch = useDispatch();
