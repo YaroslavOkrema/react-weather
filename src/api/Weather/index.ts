@@ -1,11 +1,15 @@
 import axios from "axios";
 import type { CityWeather } from "@/types";
-import { API_KEY } from "@/api/Weather/constants.ts";
+import { API_KEY, BASE_URL } from "@/api/Weather/constants.ts";
 
 export const fetchWeather = async (city: string): Promise<CityWeather> => {
-  const response = await axios.get(
-    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`,
-  );
+  const response = await axios.get(BASE_URL, {
+    params: {
+      q: city,
+      appid: API_KEY,
+      units: "metric",
+    },
+  });
   const data = response.data;
   return {
     temperature: data.main.temp,
