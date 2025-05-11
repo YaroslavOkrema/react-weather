@@ -2,3 +2,10 @@
   width: 100%;
   height: 300px;
 }
+
+@media (max-width: 600px) {
+  .hourly-forecast-chart {
+    height: 300px;
+    overflow-x: auto;
+  }
+}

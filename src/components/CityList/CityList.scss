@@ -26,3 +26,20 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+@media (max-width: 600px) {
+  .add-input {
+    width: 100%;
+    padding: 8px 0;
+  }
+
+  .add-button {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .city-list {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
