@@ -1,8 +1,9 @@
 import "src/components/CityDetails/CityDetails.scss";
 import { useCityDetails } from "@/components/CityDetails/useCityDetails.ts";
 import { HourlyForecastChart } from "@/components/HourlyForecastChart";
+import type { JSX } from "react";
 
-export const CityDetails = () => {
+export const CityDetails = (): JSX.Element => {
   const { weather, id, handleNavigate } = useCityDetails();
 
   return (

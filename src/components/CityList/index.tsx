@@ -1,8 +1,9 @@
 import { CityCard } from "@/components/CityCard";
 import { useCityList } from "@/components/CityList/useCityList.ts";
 import "@/components/CityList/CityList.scss";
+import type { JSX } from "react";
 
-export const CityList = () => {
+export const CityList = (): JSX.Element => {
   const { cities, handleAddCity, weatherData, city, setCity } = useCityList();
 
   return (

@@ -8,10 +8,11 @@ import {
 } from "recharts";
 import type { HourlyForecastChartProps } from "@/components/HourlyForecastChart/types.ts";
 import "@/components/HourlyForecastChart/HourlyForecastChart.scss";
+import type { JSX } from "react";
 
 export const HourlyForecastChart = ({
   hourlyForecast,
-}: HourlyForecastChartProps) => {
+}: HourlyForecastChartProps): JSX.Element => {
   return (
     <div className="hourly-forecast-chart">
       <h3>Погодинний прогноз</h3>
