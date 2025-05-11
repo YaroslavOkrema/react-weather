@@ -1,5 +1,5 @@
 import { CityList } from "@/components/CityList";
-import "@/components/HomePage/HomePage.scss";
+import "@/pages/HomePage/HomePage.scss";
 
 export const HomePage = () => {
   return (

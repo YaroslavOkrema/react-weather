@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { RoutesPath } from "@/types";
-import { HomePage } from "@/components/HomePage";
+import { HomePage } from "src/pages/HomePage";
 import { CityDetails } from "@/components/CityDetails";
 
 export const AppRoutes = () => {

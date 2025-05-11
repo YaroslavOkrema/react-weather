@@ -1,6 +1,8 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
-import type { CitiesState } from "@/store/ruducers/CitiesReducer/types.ts";
-import type { CityWeather } from "@/types";
+import type {
+  AddCityWeatherPayload,
+  CitiesState,
+} from "@/store/ruducers/CitiesReducer/types.ts";
 import { fetchCityWeather } from "@/store/thunks/CityWeatherThunk";
 import { fetchHourlyForecast } from "@/store/thunks/HourlyForecastThunk";
 
@@ -23,10 +25,7 @@ const citiesSlice = createSlice({
       );
       delete state.weatherData[action.payload];
     },
-    updateWeatherData(
-      state,
-      action: PayloadAction<{ city: string; weather: CityWeather }>,
-    ) {
+    updateWeatherData(state, action: PayloadAction<AddCityWeatherPayload>) {
       state.weatherData[action.payload.city] = action.payload.weather;
     },
   },

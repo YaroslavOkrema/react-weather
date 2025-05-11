@@ -15,7 +15,9 @@ export const CityList = () => {
           placeholder="Enter the city"
           className="add-input"
         />
-        <button className="add-button" onClick={handleAddCity}>Add city</button>
+        <button className="add-button" onClick={handleAddCity}>
+          Add city
+        </button>
       </div>
 
       {cities.length > 0 && (

@@ -13,8 +13,12 @@ export const CityCard = ({ city, weather }: CityCardProps): JSX.Element => {
           <h3>{city}</h3>
           <p>{weather.description}</p>
           <p>Temperature: {weather.temperature}°C</p>
-          <button className="card-btn" onClick={handleUpdate}>Update</button>
-          <button className="card-btn" onClick={handleRemove}>Delete</button>
+          <button className="card-btn" onClick={handleUpdate}>
+            Update
+          </button>
+          <button className="card-btn" onClick={handleRemove}>
+            Delete
+          </button>
         </div>
       ) : (
         <div>Loading weather...</div>
