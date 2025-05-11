@@ -7,7 +7,7 @@ import { AppRoutes } from "@/features/AppRoutes";
 function App() {
   return (
     <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename="/react-weather">
         <AppRoutes />
       </BrowserRouter>
     </Provider>
