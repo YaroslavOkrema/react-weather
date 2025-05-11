@@ -34,3 +34,27 @@
     line-height: 1.6;
   }
 }
+
+.button-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.details-btn {
+  padding: 8px 15px;
+  background-color: #1e1b2e;
+  color: white;
+  border-radius: 5px;
+  margin-left: 4px;
+  margin-top: 5px;
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    background-color: #723187;
+    transform: translateY(-2px);
+  }
+}

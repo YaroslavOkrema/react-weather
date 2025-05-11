@@ -4,10 +4,10 @@ import { useCityCard } from "@/components/CityCard/useCityCard.ts";
 import "@/components/CityCard/CityCard.scss";
 
 export const CityCard = ({ city, weather }: CityCardProps): JSX.Element => {
-  const { handleRemove, handleUpdate, handleClick } = useCityCard(city);
+  const { handleRemove, handleUpdate, handleNavigate } = useCityCard(city);
 
   return (
-    <div className="city-card" onClick={handleClick}>
+    <div className="city-card" onClick={handleNavigate}>
       {weather ? (
         <div>
           <h3>{city}</h3>

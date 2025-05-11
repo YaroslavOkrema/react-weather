@@ -22,13 +22,13 @@ export const useCityCard = (city: string) => {
     dispatch(updateWeatherData({ city, weather: updatedWeather }));
   };
 
-  const handleClick = () => {
+  const handleNavigate = () => {
     navigate(RoutesPath.CITY_DETAILS.replace(":id", city));
   };
 
   return {
     handleRemove,
     handleUpdate,
-    handleClick,
+    handleNavigate,
   };
 };

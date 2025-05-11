@@ -1,11 +1,13 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useAppSelector } from "@/hooks/useAppSelector";
 import { useAppDispatch } from "@/hooks/useAppDispatch";
 import { useEffect } from "react";
 import { fetchHourlyForecast } from "@/store/thunks/HourlyForecastThunk";
+import { RoutesPath } from "@/types";
 
 export const useCityDetails = () => {
   const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const weather = useAppSelector((state) => id && state.cities.weatherData[id]);
 
@@ -19,5 +21,9 @@ export const useCityDetails = () => {
     }
   }, [dispatch, id, weather]);
 
-  return { id, weather };
+  const handleNavigate = () => {
+    navigate(RoutesPath.HOME);
+  };
+
+  return { id, weather, handleNavigate };
 };
