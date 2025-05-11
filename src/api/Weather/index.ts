@@ -12,9 +12,9 @@ export const fetchWeather = async (city: string): Promise<CityWeather> => {
   });
   const data = response.data;
   return {
-    temperature: data.main.temp,
+    temperature: Math.round(data.main.temp),
     humidity: data.main.humidity,
-    windSpeed: data.wind.speed,
+    windSpeed: Math.round(data.wind.speed),
     description: data.weather[0].description,
     lat: data.coord.lat,
     lon: data.coord.lon,

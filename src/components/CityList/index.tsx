@@ -1,5 +1,6 @@
 import { CityCard } from "@/components/CityCard";
 import { useCityList } from "@/components/CityList/useCityList.ts";
+import "@/components/CityList/CityList.scss";
 
 export const CityList = () => {
   const { cities, handleAddCity, weatherData, city, setCity } = useCityList();
@@ -11,9 +12,10 @@ export const CityList = () => {
           type="text"
           value={city}
           onChange={(e) => setCity(e.target.value)}
-          placeholder="Додати нове місто"
+          placeholder="Enter the city"
+          className="add-input"
         />
-        <button onClick={handleAddCity}>Додати місто</button>
+        <button className="add-button" onClick={handleAddCity}>Add city</button>
       </div>
 
       {cities.length > 0 && (

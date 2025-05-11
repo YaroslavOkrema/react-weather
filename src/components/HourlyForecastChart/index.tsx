@@ -7,6 +7,7 @@ import {
   YAxis,
 } from "recharts";
 import type { HourlyForecastChartProps } from "@/components/HourlyForecastChart/types.ts";
+import "@/components/HourlyForecastChart/HourlyForecastChart.scss";
 
 export const HourlyForecastChart = ({
   hourlyForecast,

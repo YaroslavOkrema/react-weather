@@ -6,16 +6,16 @@ export const CityDetails = () => {
   const { weather, id } = useCityDetails();
 
   return (
-    <div className="p-4">
+    <div className="city-details-wrapper">
       {!weather ? (
-        <p>Завантаження...</p>
+        <p className="loading-text">Loading...</p>
       ) : (
-        <div>
-          <h2 className="text-2xl font-bold mb-4">Погода у {id}</h2>
-          <p>Температура: {weather.temperature}°C</p>
-          <p>Опис: {weather.description}</p>
-          <p>Humidity: {weather.humidity}</p>
-          <p>Wind speed: {weather.windSpeed}</p>
+        <div className="details-card">
+          <h2 className="details-title">Weather in {id}</h2>
+          <p className="details-text">Temperature: {weather.temperature}°C</p>
+          <p className="details-text">Description: {weather.description}</p>
+          <p className="details-text">Humidity: {weather.humidity}%</p>
+          <p className="details-text">Wind speed: {weather.windSpeed} km/h</p>
 
           {weather.hourlyForecast && (
             <HourlyForecastChart hourlyForecast={weather.hourlyForecast} />
